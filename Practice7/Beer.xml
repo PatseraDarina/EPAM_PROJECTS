@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Beer
+xmlns:xsi="http://www.w3.org/2001/XMLSchema"
+	xsi:schemaLocation="Beer.xsd">
+		<beer Alcohol="alcoholic">
+			<Name>Slavutich</Name>
+			<Type>Dark</Type>
+			<Manufacturer>Qqq</Manufacturer>
+			<ingredients>
+				<water>12.4</water>
+				<solod>1.3</solod>
+				<hops>7.4</hops>
+				<sugar>35.4</sugar>
+			</ingredients>
+			<chars>
+				
+			</chars>
+			

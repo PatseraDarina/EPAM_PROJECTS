@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.example.com/Beers"
+	xmlns:tns="http://www.example.com/Beers">
+		<element name="Beers">
+			<complexType>
+				<sequence>
+					<element name="Beer" type="tns:beer" minOccurs="1"
+					maxOccurs="unbounded"/>
+				</sequence>
+			</complexType>
+		</element>
+				
+			<complexType name="beer">
+				<sequence>
+						<element name="Name" type="string"/>
+						<element name="Type">
+							<simpleType>
+								<restriction base="string">
+									<enumeration value="Dark"/>
+									<enumeration value="Light"/>
+									<enumeration value="Lagernoe"/>
+									<enumeration value="Live"/>
+								</restriction>
+							</simpleType>
+						</element>
+						<element name="Manufacturer" type="string"/>
+						<element name="ingredients" type="tns:Ingredients"/>
+						<element name="chars" type="tns:Chars"/>		
+						<element name="spill" type="tns:Spill"/>	
+				</sequence>	
+				<attribute name="alcohol" type="tns:Alcohol" use="required"/>
+			</complexType>	
+			
+			<simpleType name="Alcohol">
+				<restriction base="string">
+					<pattern value="alcoholic|nonalcoholic"/>
+				</restriction>
+			</simpleType>
+			
+			<complexType name="Ingredients">
+							<all>
+								<element name="water" type="decimal"/>
+								<element name="solod" type="decimal"/>
+								<element name="hops" type="decimal"/>
+								<element name="sugar" type="decimal"/>
+							</all>
+			</complexType>
+			
+			<complexType name="Chars">
+							<all>
+								<element name="turnNumber" type="decimal"/>
+								<element name="transparency">
+									<simpleType>
+										<restriction base="string">
+											<pattern value="\d\skkal$"/>
+									</restriction>
+									</simpleType>
+								</element>						
+								<element name="filtered" type="boolean"/>
+								<element name="nutritionalМalue">
+									<simpleType>
+										<restriction base="string">
+											<pattern value="\\d\\s%$"/>
+									</restriction>
+									</simpleType>
+								</element>									
+								<element name="spill" type="tns:Spill"/>
+							</all>
+			</complexType>
+			
+			<complexType name="Spill">
+							<all>
+								<element name="amount" type="decimal"/>
+								<element name="capacitanceMaterial" type="string"/>							
+							</all>
+			</complexType>
+</schema>

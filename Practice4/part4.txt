@@ -1,0 +1,4 @@
+Класс должен разбирать текстовый файл и возвращать предложения из файла.
+Must first be compiled into an instance.
+Исходный файл брать небольшим по 
+размеру.A regular expression, specified as a string.  

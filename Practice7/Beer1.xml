@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:Beers xmlns:tns="http://www.example.com/Beers" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.com/Beers Beer.xsd ">
+  <Beer alcohol="">
+    <Name>Name</Name>
+    <Type>Dark</Type>
+    <Manufacturer>Manufacturer</Manufacturer>
+    <ingredients>
+      <water>0.0</water>
+      <solod>0.0</solod>
+      <hops>0.0</hops>
+      <sugar>0.0</sugar>
+    </ingredients>
+    <chars>
+      <turnNumber>0.0</turnNumber>
+      <transparency>transparency</transparency>
+      <filtered>true</filtered>
+      <nutritionalМalue>nutritionalМalue</nutritionalМalue>
+      <spill>
+        <amount>0.0</amount>
+        <capacitanceMaterial>capacitanceMaterial</capacitanceMaterial>
+      </spill>
+    </chars>
+    <spill>
+      <amount>0.0</amount>
+      <capacitanceMaterial>capacitanceMaterial</capacitanceMaterial>
+    </spill>
+  </Beer>
+</tns:Beers>
